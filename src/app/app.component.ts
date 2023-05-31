@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppService } from './app.service';
+import { People } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public people: any;
+  public people: People[];
 
   constructor(private readonly appService: AppService) {
     this.people = this.appService.getPeople();

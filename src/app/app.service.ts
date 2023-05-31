@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { People } from './models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppService {
-  private people = [
+  private people: People[] = [
     {
       id: 1,
       first_name: 'Tamara',
@@ -81,7 +82,7 @@ export class AppService {
 
   constructor() {}
 
-  getPeople() {
+  public getPeople(): People[] {
     return this.people;
   }
 }
